@@ -22,13 +22,6 @@ class buatSandi : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_buat_sandi)
 
-        val mainLayout = findViewById<ConstraintLayout>(R.id.sandi)
-        ViewCompat.setOnApplyWindowInsetsListener(mainLayout) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            return@setOnApplyWindowInsetsListener insets
-        }
-
         edtSandi = findViewById(R.id.input_number) // input sandi
         edtKonfirmasi = findViewById(R.id.column_number) // konfirmasi sandi
         btnDaftar = findViewById(R.id.btn_daftar)

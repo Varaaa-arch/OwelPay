@@ -5,7 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp" >
+    android:padding="16dp"
+    android:id="@+id/buatAkun">
 
     <!-- Logo Owelpay di atas -->
     <ImageView
@@ -47,7 +48,7 @@
     <!-- Input Nama -->
     <EditText
         android:id="@+id/input_number"
-        android:layout_width="0dp"
+        android:layout_width="450dp"
         android:layout_height="48dp"
         android:hint="Masukkan Nama"
         android:inputType="textPersonName"
@@ -61,7 +62,7 @@
     <!-- Button Daftar -->
     <Button
         android:id="@+id/btn_daftar"
-        android:layout_width="0dp"
+        android:layout_width="450dp"
         android:layout_height="48dp"
         android:text="Daftar"
         android:textStyle="bold"

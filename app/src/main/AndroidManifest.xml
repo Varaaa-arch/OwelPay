@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OwelPay">
         <activity
+            android:name=".homePage"
+            android:exported="false" />
+        <activity
             android:name=".buatAkun"
             android:exported="false" />
         <activity
