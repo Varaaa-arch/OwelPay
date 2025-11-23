@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/sandi">
-    <?xml version="1.0" encoding="utf-8"?>
 
     <!-- Title -->
     <!-- Logo -->
@@ -61,13 +60,14 @@
         android:textColor="#808080"
         android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/column_number"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="39dp"
         android:layout_marginTop="231dp" />
 
     <EditText
         android:id="@+id/column_number"
-        android:layout_width="350dp"
+        android:layout_width="445dp"
         android:layout_height="48dp"
         android:layout_marginTop="64dp"
         android:background="@drawable/edittext_border"
@@ -88,13 +88,14 @@
         android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/input_number"
         android:layout_marginStart="30dp"
         android:layout_marginTop="331dp" />
 
 
     <EditText
         android:id="@+id/input_number"
-        android:layout_width="350dp"
+        android:layout_width="445dp"
         android:layout_height="48dp"
         android:layout_marginTop="164dp"
         android:background="@drawable/edittext_border"

@@ -1,5 +1,6 @@
 package com.example.owelpay
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -43,7 +44,8 @@ class buatSandi : AppCompatActivity() {
                 Toast.makeText(this, "Sandi tidak sama, coba lagi!", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Sandi berhasil dibuat!", Toast.LENGTH_SHORT).show()
-                // nanti bisa intent ke halaman login / home
+                val intent = Intent(this, buatAkun::class.java)
+                startActivity(intent)
             }
         }
     }

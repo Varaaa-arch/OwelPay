@@ -78,16 +78,16 @@
     </androidx.cardview.widget.CardView>
 
     <!-- BOTTOM NAVIGATION -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:background="#AEEAF7"
-        app:itemIconSize="22dp"
-        app:itemBackground="@drawable/bottom_item_background"
-        app:itemTextColor="@color/bottom_item_color"
-        app:itemIconTint="@color/bottom_item_color"
-        app:menu="@menu/menu_bottom"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottomNav"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="65dp"-->
+<!--        android:background="#AEEAF7"-->
+<!--        app:itemIconSize="22dp"-->
+<!--        app:itemBackground="@drawable/bottom_item_background"-->
+<!--        app:itemTextColor="@color/bottom_item_color"-->
+<!--        app:itemIconTint="@color/bottom_item_color"-->
+<!--        app:menu="@menu/menu_bottom"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
