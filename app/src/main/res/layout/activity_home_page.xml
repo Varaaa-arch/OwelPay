@@ -2,18 +2,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8CFE2"
-    android:id="@+id/homePage">
+    android:id="@+id/home_page">
 
     <!-- TITLE -->
     <TextView
         android:id="@+id/title_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="OwelPay"
+        android:text="@string/owelpay"
         android:textSize="28sp"
         android:textStyle="bold"
         android:layout_marginTop="40dp"
@@ -44,12 +43,13 @@
             <ImageView
                 android:layout_width="55dp"
                 android:layout_height="55dp"
-                android:src="@drawable/opet"
+                android:src="@drawable/owelpay_logo"
                 android:background="#FFFFFFFF"
                 android:padding="5dp"
                 android:scaleType="centerCrop"
-                android:layout_marginRight="14dp"
-                android:layout_gravity="top"/>
+                android:layout_marginEnd="14dp"
+                android:layout_gravity="top"
+                android:contentDescription="@null"/>
 
             <!-- TEXT DALAM CARD -->
             <LinearLayout
@@ -60,7 +60,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Owel"
+                    android:text="@string/owel"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
@@ -68,7 +68,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Rp 0"
+                    android:text="@string/saldo"
                     android:textColor="#FFFFFF"
                     android:textSize="17sp"
                     android:layout_marginTop="5dp"/>
@@ -77,18 +77,4 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
-    <!-- BOTTOM NAVIGATION -->
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/bottomNav"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="65dp"-->
-<!--        android:background="#AEEAF7"-->
-<!--        app:itemIconSize="22dp"-->
-<!--        app:itemBackground="@drawable/bottom_item_background"-->
-<!--        app:itemTextColor="@color/bottom_item_color"-->
-<!--        app:itemIconTint="@color/bottom_item_color"-->
-<!--        app:menu="@menu/menu_bottom"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
-
 </androidx.constraintlayout.widget.ConstraintLayout>
