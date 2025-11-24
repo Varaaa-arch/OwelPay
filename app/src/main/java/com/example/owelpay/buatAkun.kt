@@ -9,7 +9,6 @@ import androidx.activity.enableEdgeToEdge
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.activity.ComponentActivity
 import android.content.Intent
 
 class buatAkun : AppCompatActivity() {
@@ -31,17 +30,19 @@ class buatAkun : AppCompatActivity() {
         btnDaftar.setOnClickListener {
             val nama = inputNama.text.toString().trim()
 
-            when {
-                nama.isEmpty() -> {
-                    Toast.makeText(this, "Isi nama dulu!", Toast.LENGTH_SHORT).show()
-                }
-                else -> {
-                    Toast.makeText(this, "Akun berhasil dibuat!", Toast.LENGTH_SHORT).show()
+            if (nama.isEmpty()) {
+                Toast.makeText(this, "Isi nama dulu!", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Akun berhasil dibuat!", Toast.LENGTH_SHORT).show()
 
-                    val intent = Intent(this, homePage::class.java)
-                    startActivity(intent)
-                }
+                // LANGSUNG PINDAH KE HOMEPAGE
+                val intent = Intent(this@buatAkun, HomePage::class.java)
+                startActivity(intent)
+
+                // Biar halaman daftar nggak bisa balik pake back
+                finish()
             }
         }
+
     }
 }
