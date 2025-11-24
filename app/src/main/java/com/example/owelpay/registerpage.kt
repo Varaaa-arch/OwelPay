@@ -44,12 +44,9 @@ class registerpage : AppCompatActivity() {
 
         // Buat klik text login
         val loginButton = findViewById<TextView>(R.id.login_button)
-//        loginButton.setOnClickListener {
-//            val intent = Intent(this, registerPage2::class.java)
-//            startActivity(intent)
-//        }
         loginButton.setOnClickListener {
-            Toast.makeText(this, "Login Di klik", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, loginPage::class.java)
+            startActivity(intent)
         }
     }
 }
