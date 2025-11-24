@@ -27,11 +27,18 @@ class registerpage : AppCompatActivity() {
             insets
         }   
 
-        // untuk btnHp
+        // buat btnHp
         val btnNoHp = findViewById<Button>(R.id.btnNoHp)
 
         btnNoHp.setOnClickListener {
             val intent = Intent(this, registerPage2::class.java)
+            startActivity(intent)
+        }
+
+        // buat btnAkunGoogle
+        val btnAkunGoogle = findViewById<Button>(R.id.btngoogle)
+        btnAkunGoogle.setOnClickListener {
+            val intent = Intent(this, akunGoogle::class.java)
             startActivity(intent)
         }
 
