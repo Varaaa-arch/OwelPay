@@ -35,11 +35,9 @@ class buatAkun : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Akun berhasil dibuat!", Toast.LENGTH_SHORT).show()
 
-                // LANGSUNG PINDAH KE HOMEPAGE
                 val intent = Intent(this@buatAkun, HomePage::class.java)
+                intent.putExtra("nama_user", nama)
                 startActivity(intent)
-
-                // Biar halaman daftar nggak bisa balik pake back
                 finish()
             }
         }
