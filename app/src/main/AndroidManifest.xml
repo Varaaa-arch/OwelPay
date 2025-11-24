@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OwelPay">
         <activity
+            android:name=".lupaSandi"
+            android:exported="false" />
+        <activity
+            android:name=".loginPage"
+            android:exported="false" />
+        <activity
             android:name=".AkunGoogle1"
             android:exported="false" />
         <activity
