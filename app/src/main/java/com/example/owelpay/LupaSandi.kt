@@ -11,7 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import android.widget.EditText
 
 
-class lupaSandi : AppCompatActivity() {
+class LupaSandi : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -24,34 +24,34 @@ class lupaSandi : AppCompatActivity() {
             insets
         }
 
-        val btn_daftar = findViewById<Button>(R.id.btn_daftar)
+        val btn_masuk = findViewById<Button>(R.id.btn_masuk)
 
 
-        btn_daftar.setOnClickListener {
-            val inputNumber = findViewById<EditText>(R.id.input_number)
-            val phone = inputNumber.text.toString().trim()
+        btn_masuk.setOnClickListener {
+            val inputNumber = findViewById<EditText>(R.id.input_email_sandi)
+            val userInput = inputNumber.text.toString().trim()
 
             // VALIDASI: kosong
-            if (phone.isEmpty()) {
-                inputNumber.error = "Nomor HP tidak boleh kosong"
+            if (userInput.isEmpty()) {
+                inputNumber.error = "Masukkan email yang digunakan akun anda"
                 return@setOnClickListener
             }
 
-            // VALIDASI: nomor hp
-            if (phone.length < 10) {
-                inputNumber.error = "Nomor HP tidak valid"
+            val isEmail = android.util.Patterns.EMAIL_ADDRESS.matcher(userInput).matches()
+            val isPhone = userInput.matches(Regex("^[0-9]+$"))
+
+            if (!isEmail && !isPhone) {
+                inputNumber.error = "Masukkan format Email atau Nomor HP yang valid"
                 return@setOnClickListener
             }
 
-            // VALIDASI: harus angka semua
-            if (!phone.matches(Regex("^[0-9]+$"))) {
-                inputNumber.error = "Nomor HP hanya boleh angka"
+            if (isPhone && userInput.length < 10){
+                inputNumber.error = "Nomor HP terlalu pendek"
                 return@setOnClickListener
             }
 
             // Kalau lolos validasi → lanjut ke OTP
             val intent = Intent(this, kodeOtp::class.java)
-            intent.putExtra("nomor_hp", phone)
             startActivity(intent)
         }
 
