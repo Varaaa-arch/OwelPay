@@ -25,7 +25,7 @@ class loginPage : AppCompatActivity() {
 
         val forgotPass = findViewById<TextView>(R.id.lupa_sandi)
         forgotPass.setOnClickListener {
-            val intent = Intent(this, loginPage::class.java)
+            val intent = Intent(this, LupaSandi::class.java)
             startActivity(intent)
         }
     }
